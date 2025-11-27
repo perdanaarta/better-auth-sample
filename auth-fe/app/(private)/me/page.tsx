@@ -1,10 +1,9 @@
 'use client';
-
-import auth from "@/lib/auth";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { AuthContext } from "@/composables/authentication";
+import { useContext, useEffect, useState } from "react";
 
 export default function Home() {
+    const { session } = useContext(AuthContext)!;
     const [data, setData] = useState<{ user: {name: string, email: string} } | null>(null);
 
     useEffect(() => {
