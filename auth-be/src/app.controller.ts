@@ -26,6 +26,8 @@ export class AppController {
   @Get('optional')
   @OptionalAuth()
   async getOptional(@Session() session: UserSession) {
+    console.log('Optional session:', session);
+
     return { authenticated: !!session };
   }
 }

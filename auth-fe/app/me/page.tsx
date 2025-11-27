@@ -24,7 +24,6 @@ export default function Home() {
             <p>Welcome, {user.email}</p>
             <p>{user.name}</p>
             <p>{user.id}</p>
-
         </main>
     )
 }
