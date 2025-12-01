@@ -17,7 +17,7 @@ const auth = betterAuth({
   plugins: [organization()],
   advanced: {
       defaultCookieAttributes: {
-        sameSite: 'none',
+        sameSite: 'lax',
         secure: false,
         httpOnly: true,
         partitioned: true,
