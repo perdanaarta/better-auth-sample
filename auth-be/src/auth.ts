@@ -17,6 +17,9 @@ const auth = betterAuth({
     'http://localhost:5000',
     'http://116.193.190.167:3000',
     'http://116.193.190.167:5000',
+    'http://test.com',
+    'http://test.com:3000',
+    'http://test.com:5000'
   ],
   plugins: [organization()],
 //   advanced: {
