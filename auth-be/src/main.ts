@@ -4,14 +4,14 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as fs from 'fs';
 
 async function bootstrap() {
-  const httpsOptions = {
-    key: fs.readFileSync('../certs/key.pem'),
-    cert: fs.readFileSync('../certs/cert.pem'),
-  };
+  // const httpsOptions = {
+  //   key: fs.readFileSync('../certs/key.pem'),
+  //   cert: fs.readFileSync('../certs/cert.pem'),
+  // };
 
   const app = await NestFactory.create(AppModule, {
     bodyParser: false,
-    httpsOptions,
+    // httpsOptions,
   });
 
   const config = new DocumentBuilder()
