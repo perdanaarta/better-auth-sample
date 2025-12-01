@@ -13,16 +13,20 @@ const auth = betterAuth({
     'https://localhost:5000',
     'https://116.193.190.167:3000',
     'https://116.193.190.167:5000',
+    'http://localhost:3000',
+    'http://localhost:5000',
+    'http://116.193.190.167:3000',
+    'http://116.193.190.167:5000',
   ],
   plugins: [organization()],
-  advanced: {
-      defaultCookieAttributes: {
-        sameSite: 'lax',
-        secure: false,
-        httpOnly: true,
-        partitioned: true,
-      },
-  }
+//   advanced: {
+//       defaultCookieAttributes: {
+//         sameSite: 'lax',
+//         secure: false,
+//         httpOnly: true,
+//         partitioned: true,
+//       },
+//   }
 });
 
 export default auth;
