@@ -1,18 +1,15 @@
-import { betterAuth } from "better-auth"
-import { organization } from "better-auth/plugins";
-import { DatabaseSync } from "node:sqlite";
+import { betterAuth } from 'better-auth';
+import { organization } from 'better-auth/plugins';
+import { DatabaseSync } from 'node:sqlite';
 
 const auth = betterAuth({
-    emailAndPassword: {    
-        enabled: true,
-        allowSignup: true,
-        database: new DatabaseSync("database.sqlite"),
-    },
-    trustedOrigins: ["http://localhost:3000"],
-    plugins: [ 
-        organization()
-    ] 
-
-})
+  emailAndPassword: {
+    enabled: true,
+    allowSignup: true,
+    database: new DatabaseSync('database.sqlite'),
+  },
+  trustedOrigins: ['http://localhost:3000/', 'http://localhost:5000/', '*'],
+  plugins: [organization()],
+});
 
 export default auth;
