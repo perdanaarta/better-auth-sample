@@ -22,7 +22,7 @@ const auth = betterAuth({
       },
     defaultCookieAttributes: {
       sameSite: 'none',
-      secure: false,
+      secure: true,
       httpOnly: true,
       partitioned: false,
     },
