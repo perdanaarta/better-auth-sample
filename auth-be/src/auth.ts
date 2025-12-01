@@ -11,7 +11,13 @@ const auth = betterAuth({
   trustedOrigins: ['http://localhost:3000/', 'http://localhost:5000/', '*'],
   plugins: [organization()],
     advanced: {
-        useSecureCookies: false
+      defaultCookieAttributes: {
+        sameSite: "none",
+        secure: true,
+        httpOnly: true,
+        partitioned: true,
+      },
+
     }
   
 });
