@@ -18,7 +18,7 @@ const auth = betterAuth({
   advanced: {
       defaultCookieAttributes: {
         sameSite: 'none',
-        secure: true,
+        secure: false,
         httpOnly: true,
         partitioned: true,
       },
