@@ -1,4 +1,5 @@
 import { betterAuth } from "better-auth"
+import { organization } from "better-auth/plugins";
 import { DatabaseSync } from "node:sqlite";
 
 const auth = betterAuth({
@@ -8,6 +9,10 @@ const auth = betterAuth({
         database: new DatabaseSync("database.sqlite"),
     },
     trustedOrigins: ["http://localhost:3000"],
+    plugins: [ 
+        organization()
+    ] 
+
 })
 
 export default auth;
