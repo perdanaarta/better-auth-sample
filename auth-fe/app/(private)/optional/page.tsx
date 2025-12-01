@@ -5,7 +5,7 @@ export default function HomeClient() {
     const [data, setData] = useState<{ authenticated: boolean } | null>(null);
 
     useEffect(() => {
-        fetch("http://localhost:5000/optional", {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/me`, {
             credentials: "include",
         })
             .then(r => r.json())
