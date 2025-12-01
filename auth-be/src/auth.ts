@@ -15,12 +15,14 @@ const auth = betterAuth({
     'https://116.193.190.167:5000',
   ],
   plugins: [organization()],
-  defaultCookieAttributes: {
-    sameSite: 'none',
-    secure: true,
-    httpOnly: true,
-    partitioned: true,
-  },
+  advanced: {
+      defaultCookieAttributes: {
+        sameSite: 'none',
+        secure: true,
+        httpOnly: true,
+        partitioned: true,
+      },
+  }
 });
 
 export default auth;
