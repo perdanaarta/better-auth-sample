@@ -8,12 +8,14 @@ const auth = betterAuth({
     allowSignup: true,
     database: new DatabaseSync('database.sqlite'),
   },
-  trustedOrigins: ['http://localhost:3000/', 'http://localhost:5000/', '*'],
+    trustedOrigins: [
+    "http://localhost:3000",
+    "http://localhost:5000",
+    "http://116.193.190.167:3000",
+    "http://116.193.190.167:5000",
+    ],
   plugins: [organization()],
   advanced: {
-    crossSubDomainCookies: {
-      enabled: true,
-    },
     defaultCookieAttributes: {
       sameSite: 'none',
       secure: false,
