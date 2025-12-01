@@ -20,7 +20,7 @@ const auth = betterAuth({
       sameSite: 'none',
       secure: false,
       httpOnly: true,
-      partitioned: true,
+      partitioned: false,
     },
   },
 });

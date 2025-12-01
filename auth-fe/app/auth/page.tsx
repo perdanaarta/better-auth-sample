@@ -28,7 +28,7 @@ export default function AuthPage() {
         }
 
         // Redirect after success
-        window.location.href = "/";
+        // window.location.href = "/";
     }
 
     return (
