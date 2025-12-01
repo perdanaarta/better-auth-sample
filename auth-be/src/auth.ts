@@ -16,6 +16,10 @@ const auth = betterAuth({
     ],
   plugins: [organization()],
   advanced: {
+    crossSubDomainCookies: {
+        enabled: true,
+        domain: ".localhost:3000",
+      },
     defaultCookieAttributes: {
       sameSite: 'none',
       secure: false,
